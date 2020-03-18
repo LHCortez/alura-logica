@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var numeroPensado = sorteia(10);
+    console.log(numeroPensado)
+
+    var chute = parseInt(prompt("Tente adivinhar e chute um número."));
+
+    if (chute == numeroPensado) {
+        mostra("Você acertou! O número pensado foi " + numeroPensado + ".");
+        break; //break interrompe o loop acima.
+
+    } else {
+        if (chute > numeroPensado) {
+            mostra("Você errou, o seu chute foi maior que o número pensado.");
+
+        } else {
+            mostra("Você errou, o seu chute foi menor que o número pensado.")
+        }
+    }
+</script>

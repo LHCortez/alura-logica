@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoLimite = parseInt(prompt("Qual o ano limite?"));
+    var anoCopa = 1930;
+
+    while (anoCopa <= anoLimite) {
+
+        if (anoCopa == 1942) {
+            mostra("Copa do Mundo de " + anoCopa + " cancelada devido à Segunda Guerra Mundial.")
+            anoCopa += 4;
+        }
+
+        if (anoCopa == 1946) {
+            mostra("Copa do Mundo de " + anoCopa + " cancelada devido à Segunda Guerra Mundial.")
+            anoCopa += 4;
+
+        } else {
+            mostra("Teve Copa do Mundo em " + anoCopa + ".")
+            anoCopa += 4;
+        }
+    }
+</script>
